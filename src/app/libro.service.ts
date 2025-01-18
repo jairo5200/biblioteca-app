@@ -23,4 +23,8 @@ export class LibroService {
   buscarLibroPorId(id: number): Observable<Libro>{
     return this.clienteHttp.get<Libro>(this.urlBase + "/" + id);
   }
+
+  editarLibro(id: number,libro: Libro): Observable<Object>{
+    return this.clienteHttp.put(this.urlBase+"/"+id,libro);
+  }
 }

@@ -30,7 +30,7 @@ export class EditarLibroComponent {
   }
 
   guardarLibro(){
-    this.libroServicio.agregarLibro(this.libro).subscribe({
+    this.libroServicio.editarLibro(this.id,this.libro).subscribe({
       next: (data) => {
         this.irListaLibros();
       },
