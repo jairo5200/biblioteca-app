@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LibroListaComponent } from './libro-lista/libro-lista.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AgregarLibroComponent } from './agregar-libro/agregar-libro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LibroListaComponent
+    LibroListaComponent,
+    AgregarLibroComponent
   ],
   imports: [
     BrowserModule,
