@@ -27,4 +27,9 @@ export class LibroService {
   editarLibro(id: number,libro: Libro): Observable<Object>{
     return this.clienteHttp.put(this.urlBase+"/"+id,libro);
   }
+
+  eliminarLibro(id: number): Observable<object>{
+    return this.clienteHttp.delete(this.urlBase+"/"+id);
+  }
+
 }

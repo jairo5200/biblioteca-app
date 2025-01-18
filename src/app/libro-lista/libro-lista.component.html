@@ -23,7 +23,7 @@
         <td>{{libro.existencia}}</td>
         <td class="text-center">
           <button class="btn btn-primary btn-sm" (click)="editarLibro(libro.idLibro)">Editar</button>
-          <button class="btn btn-danger btn-sm">Eliminar</button>
+          <button class="btn btn-danger btn-sm"  (click)="eliminarLibro(libro.idLibro)">Eliminar</button>
         </td>
       </tr>
     </tbody>

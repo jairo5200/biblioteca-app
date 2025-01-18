@@ -29,4 +29,12 @@ export class LibroListaComponent {
   editarLibro(idLibro: number){
     this.enrutador.navigate(['editar-libro',idLibro]);
   }
+
+  eliminarLibro(idLibro: number){
+    this.libroServicio.eliminarLibro(idLibro).subscribe(
+      {
+        next: (datos) => this.obtenerLibros(),
+        error: (err: any) => console.error(err)
+      });
+  }
 }
