@@ -15,4 +15,8 @@ export class LibroService {
   obtenerLibrosLista(): Observable<Libro[]>{
     return this.clienteHttp.get<Libro[]>(this.urlBase);
   }
+
+  agregarLibro(libro: Libro): Observable<Object>{
+    return this.clienteHttp.post(this.urlBase,libro);
+  }
 }
