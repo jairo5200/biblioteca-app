@@ -21,8 +21,8 @@
         <td>{{libro.descripcion}}</td>
         <td>${{libro.precio}}</td>
         <td>{{libro.existencia}}</td>
-        <td>
-          <button class="btn btn-primary btn-sm">Editar</button>
+        <td class="text-center">
+          <button class="btn btn-primary btn-sm" (click)="editarLibro(libro.idLibro)">Editar</button>
           <button class="btn btn-danger btn-sm">Eliminar</button>
         </td>
       </tr>

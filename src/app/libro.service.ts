@@ -19,4 +19,8 @@ export class LibroService {
   agregarLibro(libro: Libro): Observable<Object>{
     return this.clienteHttp.post(this.urlBase,libro);
   }
+
+  buscarLibroPorId(id: number): Observable<Libro>{
+    return this.clienteHttp.get<Libro>(this.urlBase + "/" + id);
+  }
 }

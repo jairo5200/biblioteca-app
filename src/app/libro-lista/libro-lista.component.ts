@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Libro } from '../libro';
 import { LibroService } from '../libro.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-libro-lista',
@@ -9,7 +10,7 @@ import { LibroService } from '../libro.service';
 export class LibroListaComponent {
   libros: Libro[];
 
-  constructor(private libroServicio: LibroService){
+  constructor(private libroServicio: LibroService, private enrutador: Router){
 
   }
 
@@ -23,5 +24,9 @@ export class LibroListaComponent {
     this.libroServicio.obtenerLibrosLista().subscribe(libros => {
       this.libros = libros;
       });
+  }
+
+  editarLibro(idLibro: number){
+    this.enrutador.navigate(['editar-libro',idLibro]);
   }
 }
